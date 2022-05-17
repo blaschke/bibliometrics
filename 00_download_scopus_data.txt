@@ -1,0 +1,115 @@
+# Publication authorship
+# 
+# Download data sets from SCOPUS
+#
+# Copyright (C) 2022 by Dr. Steffen Blaschke (sbl.msc@cbs.dk).
+# This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY).
+# https://creativecommons.org/licenses/by/4.0/
+
+
+Go to: Scopus/Sources/CiteScore
+
+### Accounting
+
+Select "CiteScore rank 2019"
+
+Accounting
+#1	Journal of Finance	10.3	99th percentile
+#2	Journal of Accounting Research	9.2	99th percentile
+#3	Journal of Financial Economics	8.7	98th percentile
+#4	Review of Financial Studies	8.5	97th percentile
+#5	Management Accounting Research	8.4	97th percentile
+#6	Journal of Technology Transfer	7.3	96th percentile
+#7	Accounting Review	7.1	95th percentile
+#8	Journal of Accounting and Economics	7.1	95th percentile
+#9	British Accounting Review	5.9	94th percentile
+#10	Accounting, Organizations and Society	5.8	93rd percentile
+
+Use the following SQL-Queries to download (partial) data sets:
+
+SRCTITLE ( "Journal of Finance" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( EXACTSRCTITLE ,  "Journal Of Finance" ) ) 
+SRCTITLE ( "Journal of Accounting Research" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Journal of Accounting Research" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( EXACTSRCTITLE ,  "Journal Of Accounting Research" ) ) 
+SRCTITLE ( "Journal of Financial Economics" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Review of Financial Studies" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Management Accounting Research" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( EXACTSRCTITLE ,  "Management Accounting Research" ) ) 
+SRCTITLE ( "Journal of Technology Transfer" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Accounting Review" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( EXACTSRCTITLE ,  "Accounting Review" ) ) 
+SRCTITLE ( "Journal of Accounting and Economics" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( EXACTSRCTITLE ,  "Journal Of Accounting And Economics" ) ) 
+SRCTITLE ( "British Accounting Review" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Accounting, Organizations and Society" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+
+On the command line, concatenate the downloaded (partial) data sets into a single file:
+
+cat scopus.bib scopus-2.bib scopus-3.bib scopus-4.bib scopus-5.bib scopus-6.bib scopus-7.bib scopus-8.bib scopus-9.bib scopus-10.bib > scopus_accounting_top_10_2010-2019.bib
+
+
+
+### Astronomy and astrophysics
+
+CiteScore rank 2019
+Astronomy and Astrophysics
+#1	Annual Review of Astronomy and Astrophysics	48.7	99th percentile
+#2	Astronomy and Astrophysics Review	23.9	98th percentile
+#3	Living Reviews in Solar Physics	21.3	96th percentile
+#4	Annual Review of Earth and Planetary Sciences	17.3	95th percentile
+#5	Space Science Reviews	17.3	94th percentile
+#6	Astrophysical Journal Letters	13.6	93rd percentile
+#7	Astrophysical Journal, Supplement Series	13.5	92nd percentile
+#8	Publications of the Astronomical Society of Australia	11.9	90th percentile
+#9	Nature Astronomy	11.8	89th percentile
+#10	Monthly Notices of the Royal Astronomical Society: Letters	10.5	88th percentile
+
+SRCTITLE ( "Annual Review of Astronomy and Astrophysics" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Astronomy and Astrophysics Review" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Living Reviews in Solar Physics" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Annual Review of Earth and Planetary Sciences" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Space Science Reviews" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Astrophysical Journal Letters" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( PUBYEAR ,  2011 )  OR  LIMIT-TO ( PUBYEAR ,  2010 ) ) 
+SRCTITLE ( "Astrophysical Journal Letters" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( PUBYEAR ,  2013 )  OR  LIMIT-TO ( PUBYEAR ,  2012 ) ) 
+SRCTITLE ( "Astrophysical Journal Letters" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( PUBYEAR ,  2016 )  OR  LIMIT-TO ( PUBYEAR ,  2015 )  OR  LIMIT-TO ( PUBYEAR ,  2014 ) ) 
+SRCTITLE ( "Astrophysical Journal Letters" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( PUBYEAR ,  2019 )  OR  LIMIT-TO ( PUBYEAR ,  2018 )  OR  LIMIT-TO ( PUBYEAR ,  2017 ) ) 
+SRCTITLE ( "Astrophysical Journal, Supplement Series" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Publications of the Astronomical Society of Australia" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Nature Astronomy" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Monthly Notices of the Royal Astronomical Society: Letters" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+
+cat scopus.bib scopus-2.bib scopus-3.bib scopus-4.bib scopus-5.bib scopus-6.bib scopus-7.bib scopus-8.bib scopus-9.bib scopus-10.bib scopus-11.bib scopus-12.bib scopus-13.bib > scopus_astronomy_and_astrophysics_top_10_2010-2019.bib
+
+
+
+### Gastroenterology
+
+CiteScore rank 2019
+Gastroenterology
+#1	Gut	32.2	99th percentile
+#2	Nature Reviews Gastroenterology and Hepatology	29.1	98th percentile
+#3	Gastroenterology	24.7	98th percentile
+#4	The Lancet Gastroenterology and Hepatology	17.1	97th percentile
+#5	Alimentary Pharmacology and Therapeutics	13.8	96th percentile
+#6	Gut Microbes	13.4	95th percentile
+#7	Journal of Crohn's and Colitis	12.2	95th percentile
+#8	Gastric Cancer	10.9	94th percentile
+#9	Journal of Gastroenterology	10.6	93rd percentile
+#10	American Journal of Gastroenterology	10.2	93rd percentile
+
+SRCTITLE ( "Gut" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( EXACTSRCTITLE ,  "Gut" ) )  AND  ( LIMIT-TO ( PUBYEAR ,  2014 )  OR  LIMIT-TO ( PUBYEAR ,  2013 )  OR  LIMIT-TO ( PUBYEAR ,  2012 )  OR  LIMIT-TO ( PUBYEAR ,  2011 )  OR  LIMIT-TO ( PUBYEAR ,  2010 ) ) 
+SRCTITLE ( "Gut" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( PUBYEAR ,  2019 )  OR  LIMIT-TO ( PUBYEAR ,  2018 )  OR  LIMIT-TO ( PUBYEAR ,  2017 )  OR  LIMIT-TO ( PUBYEAR ,  2016 )  OR  LIMIT-TO ( PUBYEAR ,  2015 ) )  AND  ( LIMIT-TO ( EXACTSRCTITLE ,  "Gut" ) ) 
+SRCTITLE ( "Nature Reviews Gastroenterology and Hepatology" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Gastroenterology" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( EXACTSRCTITLE ,  "Gastroenterology" ) )  AND  ( LIMIT-TO ( PUBYEAR ,  2011 )  OR  LIMIT-TO ( PUBYEAR ,  2010 ) ) 
+SRCTITLE ( "Gastroenterology" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( EXACTSRCTITLE ,  "Gastroenterology" ) )  AND  ( LIMIT-TO ( PUBYEAR ,  2014 )  OR  LIMIT-TO ( PUBYEAR ,  2013 )  OR  LIMIT-TO ( PUBYEAR ,  2012 ) )
+SRCTITLE ( "Gastroenterology" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( EXACTSRCTITLE ,  "Gastroenterology" ) )  AND  ( LIMIT-TO ( PUBYEAR ,  2017 )  OR  LIMIT-TO ( PUBYEAR ,  2016 )  OR  LIMIT-TO ( PUBYEAR ,  2015 ) ) 
+SRCTITLE ( "Gastroenterology" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( EXACTSRCTITLE ,  "Gastroenterology" ) )  AND  ( LIMIT-TO ( PUBYEAR ,  2019 )  OR  LIMIT-TO ( PUBYEAR ,  2018 ) ) 
+SRCTITLE ( "The Lancet Gastroenterology and Hepatology" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Alimentary Pharmacology and Therapeutics" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( PUBYEAR ,  2013 )  OR  LIMIT-TO ( PUBYEAR ,  2012 )  OR  LIMIT-TO ( PUBYEAR ,  2011 )  OR  LIMIT-TO ( PUBYEAR ,  2010 ) ) 
+SRCTITLE ( "Alimentary Pharmacology and Therapeutics" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( PUBYEAR ,  2016 )  OR  LIMIT-TO ( PUBYEAR ,  2015 )  OR  LIMIT-TO ( PUBYEAR ,  2014 ) ) 
+SRCTITLE ( "Alimentary Pharmacology and Therapeutics" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( PUBYEAR ,  2019 )  OR  LIMIT-TO ( PUBYEAR ,  2018 )  OR  LIMIT-TO ( PUBYEAR ,  2017 ) ) 
+SRCTITLE ( "Gut Microbes" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Journal of Crohn's and Colitis" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020
+SRCTITLE ( "Gastric Cancer" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020 
+SRCTITLE ( "Journal of Gastroenterology" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( EXACTSRCTITLE ,  "Journal Of Gastroenterology" ) ) 
+SRCTITLE ( "American Journal of Gastroenterology" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( PUBYEAR ,  2013 )  OR  LIMIT-TO ( PUBYEAR ,  2012 )  OR  LIMIT-TO ( PUBYEAR ,  2011 )  OR  LIMIT-TO ( PUBYEAR ,  2010 ) ) 
+SRCTITLE ( "American Journal of Gastroenterology" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( PUBYEAR ,  2017 )  OR  LIMIT-TO ( PUBYEAR ,  2016 )  OR  LIMIT-TO ( PUBYEAR ,  2015 )  OR  LIMIT-TO ( PUBYEAR ,  2014 ) ) 
+SRCTITLE ( "American Journal of Gastroenterology" )  AND  PUBYEAR  >  2009  AND  PUBYEAR  <  2020  AND  ( LIMIT-TO ( PUBYEAR ,  2019 )  OR  LIMIT-TO ( PUBYEAR ,  2018 ) ) 
+ 
+cat scopus.bib scopus-2.bib scopus-3.bib scopus-4.bib scopus-5.bib scopus-6.bib scopus-7.bib scopus-8.bib scopus-9.bib scopus-10.bib scopus-11.bib scopus-12.bib scopus-13.bib scopus-14.bib scopus-15.bib scopus-16.bib scopus-17.bib scopus-18.bib > scopus_top_10_gastroenterology.bib
